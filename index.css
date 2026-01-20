@@ -1,0 +1,366 @@
+/* =========================
+   Reset & Base
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.clear {
+  clear: both;
+}
+
+/* =========================
+   Header / Navbar
+========================= */
+.Header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 2px 6px rgb(205, 224, 231);
+  z-index: 1000;
+}
+
+.port {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.menu ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+  font-size: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #000;
+  padding-bottom: 5px;
+}
+
+.menu a:hover {
+  border-bottom: 3px solid #1050ff;
+}
+
+/* =========================
+   Common Elements
+========================= */
+.text {
+  font-weight: bolder;
+}
+
+.label {
+  color: #1050ff;
+}
+
+.topic {
+  width: fit-content;
+  margin: 50px auto 30px;
+  text-align: center;
+  font-size: 45px;
+  font-weight: bold;
+  color: #1050ff;
+  border-bottom: 3px solid #1050ff;
+}
+
+.highlight {
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+#home {
+  scroll-margin-top: 120px;
+}
+
+/* =========================
+   Button
+========================= */
+.conbtn {
+  font-size: 25px;
+  padding: 2% 8%;
+  color: white;
+  border-radius: 7px;
+  background-color: #3e6ff4;
+}
+
+/* =========================
+   Section: Box1 (Hero)
+========================= */
+.box1 {
+  max-width: 1200px;
+  margin: auto;
+  padding: 80px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.box1text {
+  flex: 1;
+  font-size: 50px;
+}
+
+.box1pic {
+  flex: 1;
+  max-width: 500px;
+}
+
+/* =========================
+   Section: Box2 (About)
+========================= */
+.box2 {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.box2pic {
+  flex: 1;
+  max-width: 350px;
+}
+
+.box2text {
+  flex: 1;
+  font-size: 20px;
+}
+
+/* =========================
+   Section: Box3 (Skills)
+========================= */
+.box3 {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.box3text {
+  flex: 1;
+  font-size: 20px;
+}
+
+.box3pic {
+  flex: 1;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 20px;
+  display: block;
+}
+
+/* =========================
+   Skills Bar
+========================= */
+.skill {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 300px;
+  background-color: white;
+  box-shadow: 1px 1px 1px 1px rgb(191, 213, 220);
+  border-radius: 2px;
+  padding: 0.5px 10px 0 0;
+}
+
+.language {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 5px 5px 6px;
+}
+
+.htmlline,
+.css3line,
+.javaline,
+.uxuiline {
+  height: 4px;
+  background-color: #1050ff;
+}
+
+.htmlline { width: 95%; }
+.css3line { width: 85%; }
+.javaline { width: 65%; }
+.uxuiline { width: 85%; }
+
+/* =========================
+   Section: Box4 (Work)
+========================= */
+.box4 {
+  max-width: 1400px;
+  margin: auto;
+  padding: 40px 20px;
+
+  display: grid;
+  gap: 20px;
+}
+
+.box4 img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.box4 img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* =========================
+   Section: Box5 (Contact)
+========================= */
+.box5 {
+  max-width: 600px;
+  margin: auto;
+  padding: 60px 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input {
+  width: 100%;
+  height: 50px;
+  padding: 12px;
+  border: 2px solid #0d0f10;
+  border-radius: 10px;
+}
+
+.Mainput {
+  width: 100%;
+  height: 180px;
+  padding: 12px;
+  border: 2px solid #50555b;
+  border-radius: 10px;
+}
+
+.send {
+  margin-left: 350px;
+  padding: 7px 32px;
+  background-color: #1050ff;
+  color: white;
+  border-radius: 7px;
+  font-weight: bold;
+}
+
+/* =========================
+   Footer
+========================= */
+.footer {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #0d1630;
+  color: white;
+}
+
+.name {
+  padding-top: 20px;
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.and {
+  padding-top: 60px;
+  font-size: 15px;
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 1023px) {
+  .skill {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu ul {
+    gap: 12px;
+  }
+
+  .box1,
+  .box2,
+  .box3 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .box1pic,
+  .box2pic,
+  .box3pic {
+    display: flex;
+    justify-content: center; 
+    align-items: center;     
+  }
+}
+
+/* =========================
+   Work Grid
+========================= */
+@media (min-width: 1024px) {
+  .box4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .box4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .box4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .box1pic img,
+  .box2pic img,
+  .box3pic img {
+    height: auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .box2pic {
+    margin-top: 20px;
+  }
+}
