@@ -26,16 +26,47 @@ h1 {
     margin: 0 auto 32px;
 
     width: 100%;
-    max-width: 520px;   /* ⬅️ ใหญ่มาก */
-    height: 520px;      /* ⬅️ ใหญ่มาก */
+    max-width: 520px;   
+    height: 520px;     
 
-    object-fit: contain;      /* ไม่ crop หน้า */
+    object-fit: contain;      
     object-position: center;
 
-    background-color: #ffffff; /* ขอบขาว */
+    background-color: #ffffff; 
     border-radius: 26px;
     border: 6px solid #fff;
     box-shadow: 0 18px 44px rgba(0,0,0,0.32);
+}
+
+.link-card {
+  max-width: 360px;        
+  margin: 16px 0;        
+  padding: 14px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.link-card a {
+  display: block;
+  padding: 10px 14px;     
+  margin-bottom: 8px;
+  background-color: #4a90e2;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 14px;        
+  font-weight: 500;
+  box-shadow: 0 4px 8px rgba(74, 144, 226, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.link-card a:last-child {
+  margin-bottom: 0;
+}
+
+.link-card a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(74, 144, 226, 0.5);
 }
 
 /* 📱 มือถือ */
