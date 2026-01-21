@@ -10,6 +10,8 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 .clear {
@@ -43,6 +45,12 @@ body {
   font-weight: bold;
 }
 
+.menu{
+  display: flex;
+  flex-wrap: wrap;        /* ⭐ สำคัญ */
+  gap: 12px;
+}
+
 .menu ul {
   display: flex;
   align-items: center;
@@ -52,6 +60,7 @@ body {
 }
 
 .menu a {
+  white-space: nowrap;
   text-decoration: none;
   color: #000;
   padding-bottom: 5px;
@@ -364,3 +373,34 @@ body {
     margin-top: 20px;
   }
 }
+
+@media (max-width: 768px) {
+
+  .port {
+    flex-direction: column;     /* เรียง logo + menu ลง */
+    align-items: flex-start;    /* ชิดซ้าย */
+    gap: 10px;
+  }
+
+  .menu ul {
+    flex-wrap: wrap;            /* ⭐ ตัดบรรทัด */
+    gap: 12px;
+    font-size: 16px;            /* ลดขนาดตัวอักษร */
+  }
+
+  .menu a {
+    padding-bottom: 2px;
+  }
+}
+
+@media (max-width: 768px) {
+  .box1text {
+    font-size: 32px;   /* จาก 50px → ลด */
+  }
+
+  .conbtn {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+}
+
