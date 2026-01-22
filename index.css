@@ -97,6 +97,20 @@ body {
   margin-bottom: 10px;
 }
 
+.about-text {
+  max-width: 600px;         
+  margin: 0 auto;            
+  text-align: left;         
+  font-size: 16px;
+  line-height: 1.8;          
+  color: #1f2937;           
+}
+
+.name-highlight {
+  font-weight: 600;
+  color: #1e3a8a;
+}
+
 #home {
   scroll-margin-top: 120px;
 }
@@ -105,12 +119,15 @@ body {
    Button
 ========================= */
 .conbtn {
+  display: inline-block;
   font-size: 18px;
-  padding: 10px 26px;
-  color: aliceblue;
-  background-color: #1050ff;
-  border-radius: 6px;
+  padding: 10px 20px;     
+  color: #fff;
+  background-color: #2563eb;
+  border-radius: 8px;
   text-decoration: none;
+  max-width: 100%;        
+  box-sizing: border-box; 
 }
 
 /* =========================
@@ -279,12 +296,14 @@ body {
 }
 
 .send {
-  margin-left: 350px;
-  padding: 7px 32px;
+  align-self: flex-end;      
+  padding: 10px 28px;
   background-color: #1050ff;
   color: white;
-  border-radius: 7px;
-  font-weight: bold;
+  border-radius: 8px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
 }
 
 /* =========================
@@ -377,7 +396,6 @@ body {
 }
 
 @media (max-width: 768px) {
-
   .port {
     flex-direction: column;     
     align-items: flex-start;    
@@ -401,7 +419,17 @@ body {
   }
 
   .conbtn {
-    font-size: 18px;
-    padding: 10px 20px;
+    font-size: 16px;
+    padding: 10px 16px;
+    width: auto;          
   }
 }
+
+@media (max-width: 768px) {
+  .about-text {
+    font-size: 15px;
+    line-height: 1.9;
+    padding: 0 10px;
+  }
+}
+
