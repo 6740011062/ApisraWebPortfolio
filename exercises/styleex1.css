@@ -1,62 +1,65 @@
 body {
-    background-color: #e6e6e6;
+    background-color: #f5f6f8;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    padding: 40px 20px;
-    color: #000;
+    padding: 32px 16px;
+    color: #0f172a;
 }
 
 .exbg{
-    max-width: 900px;
+    max-width: 880px;
     margin:0 auto;
     background-color: #85c1e9;
-    padding: 30px;              
-    border-radius: 16px;        
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
+    padding: 32px;              
+    border-radius: 18px;        
+    box-shadow: 0 10px 28px rgba(0,0,0,0.08);
 }
 
 h1 {
-    font-size: 22px;
-    color: #1f4fb2; 
-    margin-bottom: 15px;
+    font-size: 20px;
+    color: #1e40af;                     
+    margin-bottom: 18px;
+    font-weight: 600;
 }
 
 .profile-img {
     display: block;
-    margin: 0 auto 32px;
+  margin: 0 auto 28px;
 
-    width: 100%;
-    max-width: 520px;   
-    height: 520px;     
+  width: 100%;
+  max-width: 420px;
+  height: auto;                      
+  object-fit: contain;
 
-    object-fit: contain;      
-    object-position: center;
-
-    background-color: #ffffff; 
-    border-radius: 26px;
-    border: 6px solid #fff;
-    box-shadow: 0 18px 44px rgba(0,0,0,0.32);
+  background-color: #f8fafc;
+  border-radius: 20px;
+  border: none;                      
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
 }
 
 .link-card {
-  max-width: 360px;        
-  margin: 16px 0;        
-  padding: 14px;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  max-width: 340px;
+  margin: 20px auto 0;                
+  padding: 12px;
+  border-radius: 14px;
+  background-color: #f8fafc;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
 .link-card a {
   display: block;
-  padding: 10px 14px;     
-  margin-bottom: 8px;
-  background-color: #4a90e2;
-  color: #fff;
+  padding: 10px 14px;
+  margin-bottom: 10px;
+
+  background-color: #4a90e2;          
+  color: #ffffff;
   text-decoration: none;
   border-radius: 10px;
-  font-size: 14px;        
+  font-size: 14px;
   font-weight: 500;
-  box-shadow: 0 4px 8px rgba(74, 144, 226, 0.35);
+  text-align: center;
+
+  box-shadow: 0 4px 10px rgba(37,99,235,0.35);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -66,29 +69,26 @@ h1 {
 
 .link-card a:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(74, 144, 226, 0.5);
+  box-shadow: 0 6px 14px rgba(37,99,235,0.45);
 }
 
-/* 📱 มือถือ */
+/* 📱 Mobile */
 @media (max-width: 767px) {
-    .profile-img {
-        max-width: 300px;
-        height: 300px;
-    }
+  .profile-img {
+    max-width: 280px;
+  }
 }
 
-/* 📲 แท็บเล็ต */
+/* 📲 Tablet */
 @media (min-width: 768px) and (max-width: 1023px) {
-    .profile-img {
-        max-width: 360px;
-        height: 360px;
-    }
+  .profile-img {
+    max-width: 340px;
+  }
 }
 
-/* 💻 เดสก์ท็อป */
+/* 💻 Desktop */
 @media (min-width: 1024px) {
-    .profile-img {
-        max-width: 420px;
-        height: 420px;
-    }
+  .profile-img {
+    max-width: 400px;
+  }
 }
