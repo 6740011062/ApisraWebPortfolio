@@ -7,13 +7,29 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="index.css" />
   </head>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("menu");
+      menu.classList.toggle("show");
+    }
+    
+    const links = document.querySelectorAll(".menu a");
+    links.forEach((link) => {
+      link.addEventListener("click", () => {
+        document.getElementById("menu").classList.remove("show");
+      });
+    });
+  </script>
+
   <body>
     <!-- ================= Header ================= -->
     <div class="Header">
       <div class="port">
         <div class="logo">Apisra</div>
 
-        <div class="menu">
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+        <div class="menu" id="menu">
           <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="exercises/exercise.html">Exercises</a></li>
@@ -30,8 +46,8 @@
     <div class="box1" id="home">
       <div class="box1text">
         <h1 class="hero-title">
-          Hi,<br>
-          I am <span class="name-highlight">Apisra</span><br>
+          Hi,<br />
+          I am <span class="name-highlight">Apisra</span><br />
           Web Designer
         </h1>
 
