@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+.Header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 2px 6px rgb(205, 224, 231);
+  z-index: 1000;
+}
+
+.port {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  height: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.menu-toggle {
+  display: none;
+  width: 24px;
+  height: 24px;
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  align-items: center;
+  justify-content: center;
+}
+
+.menu {
+  display: flex;
+}
+
+.menu ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+  font-size: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #000;
+  position: relative;
+  padding-bottom: 5px;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #1050ff;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #1050ff;
+  transition: width 0.3s;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+.hero-title {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #0f172a;
+}
+
+.name-highlight {
+  color: #1e3a8a;
+  font-weight: 800;
+}
+
+.topic {
+  margin: 50px auto 30px;
+  font-size: 45px;
+  font-weight: bold;
+  color: #1e3a8a;
+  border-bottom: 3px solid #1e3a8a;
+  width: fit-content;
+}
+
+.box1,
+.box2,
+.box3 {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.box1text {
+  font-size: 42px;
+}
+
+.box1pic,
+.box2pic,
+.box3pic {
+  max-width: 500px;
+}
+
+.conbtn,
+.send {
+  background-color: #1050ff;
+  color: white;
+  border-radius: 8px;
+  padding: 8px 16px;    
+  border: none;
+  cursor: pointer;
+  font-size: 16px;      
+  transition: all 0.3s;
+}
+
+.conbtn:hover,
+.send:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(16,80,255,0.3);
+}
+
+.skill {
+  max-width: 300px;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  margin-top: 20px;
+}
+
+.language {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 10px;
+}
+
+.htmlline,
+.css3line,
+.javaline,
+.uxuiline {
+  height: 4px;
+  background: #1050ff;
+  border-radius: 4px;
+}
+
+.htmlline { width: 95%; }
+.css3line { width: 85%; }
+.javaline { width: 65%; }
+.uxuiline { width: 85%; }
+
+.box4 {
+  max-width: 1400px;
+  margin: auto;
+  padding: 40px 20px;
+  display: grid;
+  gap: 20px;
+}
+
+.box4 img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.box4 img:hover {
+  transform: scale(1.02);
+}
+
+.box5 {
+  max-width: 600px;
+  margin: auto;
+  padding: 60px 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.input,
+.Mainput {
+  width: 100%;
+  border: 2px solid #000;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.footer {
+  height: 150px;
+  background: #0f172a;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name {
+  padding-top: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .menu {
+    display: none;
+    width: 100%;
+  }
+
+  .menu.show {
+    display: block;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  .box1,
+  .box2,
+  .box3 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 30px;
+  }
+  .conbtn,
+  .send {
+  background-color: #1050ff;
+  color: white;
+  border-radius: 8px;
+  padding: 8px 16px;     
+  border: none;
+  cursor: pointer;
+  font-size: 16px;      
+  transition: all 0.3s;
+}
+}
+
+@media (min-width: 1024px) {
+  .box4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

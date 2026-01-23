@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f4f4f4;
+    }
+    .product-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .product-card {
+      background: #ffffff;
+      border-radius: 12px;
+      padding: 15px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      transition: transform 0.3s ease;
+
+      /* สำคัญ */
+      height: 360px; /* ความสูงเท่ากันทุกใบ */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 160px; /* ลดจาก 200px */
+      object-fit: contain; /* เปลี่ยนจาก cover → contain */
+      border-radius: 8px;
+      margin-bottom: 10px;
+      background-color: #f9f9f9; /* กันรูปโปร่งดูโล่ง */
+      padding: 5px;
+    }
+
+    .product-card h3 {
+      font-size: 17px;
+      margin: 5px 0;
+    }
+
+    .price {
+      color: #e53935;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .product-card button {
+      background: #1976d2;
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .product-card button:hover {
+      background: #0d47a1;
+    }
+
+    @media (max-width: 900px) {
+      .product-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .product-container {
+        grid-template-columns: 1fr;
+        padding: 15px;
+      }
+    }
+  </style>
+  <body>
+    <div class="product-container">
+      <div class="product-card">
+        <img
+          src="https://i.pinimg.com/1200x/a0/ca/64/a0ca644fdd253601559b0c526b790ad6.jpg"
+          alt="Product Image 1"
+        />
+        <h3>หูฟังไร้สาย Bluetooth</h3>
+        <p class="price">฿1,299</p>
+        <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+      </div>
+      <div class="product-card">
+        <img
+          src="https://i.pinimg.com/736x/47/38/c7/4738c7920a5a8c1b445df88c2d78ab72.jpg"
+          alt="Product Image 2"
+        />
+        <h3>ลำโพงพกพา</h3>
+        <p class="price">฿2,499</p>
+        <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+      </div>
+      <div class="product-card">
+        <img
+          src="https://i.pinimg.com/1200x/a8/e7/8a/a8e78af3c7d19e8bab11f1a87451988f.jpg"
+          alt="Product Image 3"
+        />
+        <h3>เมาส์ไร้สาย</h3>
+        <p class="price">฿799</p>
+        <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+      </div>
+      <div class="product-card">
+        <img
+          src="https://i.pinimg.com/736x/7d/39/39/7d3939a449d49568723455058462e0c3.jpg"
+          alt="Product Image 4"
+        />
+        <h3>คีย์บอร์ด Gaming</h3>
+        <p class="price">฿1,999</p>
+        <button class="add-to-cart">เพิ่มลงตะกร้า</button>
+      </div>
+    </div>
+  </body>
+</html>

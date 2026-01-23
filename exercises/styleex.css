@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  padding: 40px 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f8fafc;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 60px 40px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(16,80,255,0.08),
+    rgba(16,80,255,0.03)
+  );
+  border-radius: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.container h1 {
+  text-align: center;
+  font-size: 42px;
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-bottom: 50px;
+  letter-spacing: -0.5px;
+}
+
+.exercise-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: grid;
+  gap: 30px;
+}
+
+.exercise-list li {
+  animation: fadeUp 0.6s ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.exercise-list li a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  padding: 28px;
+  text-align: center;
+
+  background: #ffffff;
+  border-radius: 24px;
+  border: 1px solid rgba(16,80,255,0.15);
+
+  text-decoration: none;
+  color: #0f172a;
+
+  box-shadow:
+    0 6px 16px rgba(0,0,0,0.08),
+    inset 0 1px 0 rgba(255,255,255,0.6);
+
+  transition: all 0.35s ease;
+}
+
+.exercise-list li a:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(16,80,255,0.25);
+  border-color: #1e3a8a;
+}
+
+.ex-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1e3a8a;
+}
+
+.ex-sub {
+  font-size: 14px;
+  color: #475569;
+}
+
+/* 📱 Mobile */
+@media (max-width: 767px) {
+  body {
+    padding: 30px 15px;
+  }
+
+  .container {
+    padding: 40px 20px;
+  }
+
+  .container h1 {
+    font-size: 30px;
+    margin-bottom: 35px;
+  }
+
+  .exercise-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .ex-title {
+    font-size: 17px;
+  }
+
+  .ex-sub {
+    font-size: 13px;
+  }
+}
+
+/* 📲 Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container h1 {
+    font-size: 36px;
+  }
+
+  .exercise-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ex-title {
+    font-size: 18px;
+  }
+}
+
+/* 💻 Desktop */
+@media (min-width: 1024px) {
+  .container h1 {
+    font-size: 42px;
+  }
+
+  .exercise-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
