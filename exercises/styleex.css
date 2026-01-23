@@ -93,6 +93,34 @@ body {
   color: #475569;
 }
 
+.back-home-wrapper {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.back-home {
+  display: inline-block;
+  padding: 10px 18px;
+
+  font-size: 14px;
+  font-weight: 600;
+  color: #1f4fb2;
+  text-decoration: none;
+
+  border: 2px solid #1f4fb2;
+  border-radius: 12px;
+  background-color: #ffffff;
+
+  transition: all 0.25s ease;
+}
+
+.back-home:hover {
+  background-color: #1f4fb2;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+
 /* 📱 Mobile */
 @media (max-width: 767px) {
   body {
