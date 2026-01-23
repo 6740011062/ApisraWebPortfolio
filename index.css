@@ -15,8 +15,9 @@ body {
   position: sticky;
   top: 0;
   width: 100%;
-  background: white;
-  box-shadow: 0 2px 6px rgb(205, 224, 231);
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
   z-index: 1000;
 }
 
@@ -28,6 +29,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  position: relative;
 }
 
 .logo {
@@ -49,6 +52,15 @@ body {
 
   align-items: center;
   justify-content: center;
+
+  border-radius: 8px;
+  padding: 4px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.menu-toggle:hover {
+  background: #f1f5f9;
+  transform: scale(1.1);
 }
 
 .menu {
@@ -88,6 +100,17 @@ body {
 .menu a:hover::after {
   width: 100%;
 }
+
+.menu li {
+  padding: 12px 20px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.menu li:hover {
+  background: #eaf0ff;
+  transform: translateX(4px);
+}
+
 
 .hero-title {
   font-size: 56px;
@@ -139,6 +162,7 @@ body {
   max-width: 1200px;
   margin: auto;
   padding: 60px 20px;
+  border-radius: 24px;
 
   display: flex;
   align-items: center;
@@ -287,6 +311,7 @@ body {
     gap: 12px;
     margin-top: 10px;
   }
+  
 
   .box1,
   .box2,
@@ -332,5 +357,35 @@ body {
 @media (min-width: 1024px) {
   .box4 {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 220px;
+
+    background: linear-gradient(180deg, #ffffff, #f8fafc);
+    border-radius: 18px;
+    box-shadow:
+      0 20px 40px rgba(0,0,0,0.15),
+      0 5px 10px rgba(0,0,0,0.08);
+
+    padding: 12px 0;
+    animation: dropDown 0.3s ease;
+  }
+}
+
+@keyframes dropDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
 }

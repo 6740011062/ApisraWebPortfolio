@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    
     <div class="Header">
       <div class="port">
         <div class="logo">Apisra</div>
 
-        <div class="menu">
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+
+        <div class="menu" id="menu">
           <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="exercises/exercise.html">Exercises</a></li>
@@ -160,5 +161,11 @@
       <h1 class="name">Apisra</h1>
       <h4 class="and">@Webprogramming. All rights reserved</h4>
     </div>
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementById("menu");
+        menu.classList.toggle("show");
+      }
+    </script>
   </body>
 </html>
