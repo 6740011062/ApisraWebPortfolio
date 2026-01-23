@@ -18,6 +18,7 @@ body {
   clear: both;
 }
 
+
 /* =========================
    Header / Navbar
 ========================= */
@@ -64,21 +65,44 @@ body {
   text-decoration: none;
   color: #000;
   padding-bottom: 5px;
+  position: relative;
+  transition: color 0.3s ease;
 }
 
 .menu a:hover {
   border-bottom: 2px solid #1050ff;
+  color: #1050ff;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: #1050ff;
+  transition: width 0.3s ease;
+}
+
+.menu a:hover::after {
+  width: 100%;
 }
 
 /* =========================
    Common Elements
 ========================= */
-.text {
-  font-weight: bolder;
+.hero-title {
+  font-size: 56px;        
+  font-weight: 700;
+  line-height: 1.2;
+  color: #0f172a;
+  letter-spacing: -0.5px;
 }
 
-.label {
-  color: #1050ff;
+.name-highlight {
+  color: #1e3a8a;
+  font-weight: 800;
 }
 
 .topic {
@@ -87,16 +111,16 @@ body {
   text-align: center;
   font-size: 45px;
   font-weight: bold;
-  color: #1050ff;
-  border-bottom: 3px solid #1050ff;
+  color: #1e3a8a;
+  border-bottom: 3px solid #1e3a8a;
 }
 
-.hero-text-group {
-  max-width: 600px;        /* ⭐ จำกัดความกว้าง */
-  padding: 0 16px;         /* ⭐ กันชนขอบจอ */
+.text-group {
+  max-width: 600px;        
+  padding: 0 16px;         
 }
 
-.hero-title {
+.title {
   font-size: 40px;
   font-weight: 600;
   color: #0f172a;
@@ -104,12 +128,13 @@ body {
   line-height: 1.2;
 }
 
-.hero-text {
+.text {
   font-size: 16px;
   line-height: 1.8;
   color: #374151;
+  max-width: 520px;
 
-  word-wrap: break-word;   /* ⭐ บังคับตัดคำ */
+  word-wrap: break-word;   
   overflow-wrap: break-word;
 }
 
@@ -153,7 +178,7 @@ body {
 
 .box1text {
   flex: 1;
-   font-size: 42px;
+  font-size: 42px;
   line-height: 1.3;
 }
 
@@ -224,6 +249,7 @@ body {
   box-shadow: 0 1px 4px rgba(0,0,0,0.08);
   border-radius: 6px;
   padding: 0.5px 10px 0 0;
+  overflow: hidden;
 }
 
 .language {
@@ -241,6 +267,12 @@ body {
 .uxuiline {
   height: 4px;
   background-color: #1050ff;
+  border-radius: 4px;
+  animation: load 1.2s ease-in-out;
+}
+
+@keyframes load {
+  from { width: 0; }
 }
 
 .htmlline { width: 95%; }
@@ -266,11 +298,14 @@ body {
   object-fit: cover;
   border-radius: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: #fff;
+  filter: grayscale(10%);
 }
 
 .box4 img:hover {
   transform: scale(1.02);
   box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+  filter: grayscale(0%);
 }
 
 /* =========================
@@ -302,6 +337,18 @@ body {
   border-radius: 10px;
 }
 
+.input,
+.Mainput {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input:focus,
+.Mainput:focus {
+  outline: none;
+  border-color: #1050ff;
+  box-shadow: 0 0 0 3px rgba(16,80,255,0.15);
+}
+
 .send {
   align-self: flex-end;      
   padding: 10px 28px;
@@ -312,6 +359,24 @@ body {
   border: none;
   cursor: pointer;
 }
+
+.conbtn,
+.send {
+  transition: all 0.3s ease;
+}
+
+.conbtn:hover,
+.send:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(16,80,255,0.3);
+}
+
+.conbtn:active,
+.send:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(16,80,255,0.2);
+}
+
 
 /* =========================
    Footer
@@ -453,6 +518,40 @@ body {
   .hero-text {
     font-size: 15px;
     line-height: 1.9;
+  }
+}
+
+/* 💻 Desktop / Laptop (1024px) */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .hero-title {
+    font-size: 56px;
+    line-height: 1.2;
+  }
+}
+
+/* 📱 Tablet (768px – 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero-title {
+    font-size: 44px;
+    line-height: 1.25;
+  }
+}
+
+/* 📱 Mobile (≤767px) */
+@media (max-width: 767px) {
+  .hero-title {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+}
+
+.name-highlight {
+  font-size: 1.1em;
+}
+
+@media (max-width: 767px) {
+  .name-highlight {
+    font-size: 1.05em;
   }
 }
 
