@@ -151,6 +151,12 @@ body {
   gap: 60px;
 }
 
+.title {
+  font-size: 30px;     
+  font-weight: 700;
+  color: #0f172a;
+}
+
 .box2pic {
   flex: 0 0 420px;         
   display: flex;
@@ -435,6 +441,22 @@ img:hover {
 
 }
 
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+  backdrop-filter: blur(2px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 900;
+}
+
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 @media (min-width: 1024px) {
   .box4 {
     grid-template-columns: repeat(3, 1fr);
@@ -499,4 +521,3 @@ img:hover {
 .box5 {
   animation: pageFadeUp 0.8s ease-out 0.4s both;
 }
-
