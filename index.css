@@ -470,3 +470,33 @@ img:hover {
     transform: translateY(0) scale(1);
   }
 }
+
+@keyframes pageFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.box1 {
+  animation: pageFadeUp 0.8s ease-out both;
+}
+.box2 {
+  animation: pageFadeUp 0.8s ease-out 0.1s both;
+}
+
+.box3 {
+  animation: pageFadeUp 0.8s ease-out 0.2s both;
+}
+
+.box4 {
+  animation: pageFadeUp 0.8s ease-out 0.3s both;
+}
+
+.box5 {
+  animation: pageFadeUp 0.8s ease-out 0.4s both;
+}
+
